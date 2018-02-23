@@ -1,3 +1,5 @@
+/* globals util */
+
 var app = (function (undefined) {
     'use strict';
 
@@ -18,7 +20,7 @@ var app = (function (undefined) {
         $.get('api/clientes/' + mci + '.json', function (cliente) {
             $('#tblDetalhaCliente tbody').empty();
             $('#tblDetalhaCliente tbody').append(
-                '<tr><td>' + cliente.mci + '</td><td>' + cliente.nome + '</td><td>' + cliente.documento + '</td></tr>'
+                '<tr><td>' + util.formataMCI(cliente.mci) + '</td><td>' + cliente.nome + '</td><td>' + cliente.documento + '</td></tr>'
             );
             $('#mdlDetalhaCliente').modal('show');
         });
@@ -28,7 +30,7 @@ var app = (function (undefined) {
         $('#tblClientes tbody').empty();
         clientes.forEach(function (cliente) {
             $('#tblClientes tbody').append(
-                '<tr><td>' + cliente.mci + '</td>' +
+                '<tr><td>' + util.formataMCI(cliente.mci) + '</td>' +
                 '<td>' + cliente.nome + '</td>' +
                 '<td><div class="btn-group" role="group">' +
                 '<button type="button" class="btn btn-info" onclick="app.detalharCliente(' + cliente.mci + ')">Detalhar</button>' +
