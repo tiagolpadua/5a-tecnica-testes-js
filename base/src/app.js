@@ -14,18 +14,12 @@ var app = (function (undefined) {
         });
     }
 
-    function aplicaMascaraMCI(mci) {
-        return mci.toString().substring(0, 3) + '.' +
-            mci.toString().substring(3, 6) + '.' +
-            mci.toString().substring(6, 9);
-    }
-
     function detalharCliente(mci) {
         $.get('api/clientes/' + mci + '.json', function (cliente) {
             $('#tblDetalhaCliente tbody').empty();
             $('#tblDetalhaCliente tbody').append(
                 '<tr><td>' +
-                aplicaMascaraMCI(cliente.mci) +
+                cliente.mci.toString().substring(0, 3) + '.' + cliente.mci.toString().substring(3, 6) + '.' + cliente.mci.toString().substring(6, 9) +
                 '</td><td>' + cliente.nome + '</1td><td>' + cliente.documento + '</td></tr>'
             );
             $('#mdlDetalhaCliente').modal('show');
@@ -37,7 +31,7 @@ var app = (function (undefined) {
         clientes.forEach(function (cliente) {
             $('#tblClientes tbody').append(
                 '<tr><td>' +
-                aplicaMascaraMCI(cliente.mci) +
+                cliente.mci.toString().substring(0, 3) + '.' + cliente.mci.toString().substring(3, 6) + '.' + cliente.mci.toString().substring(6, 9) +
                 '</td>' +
                 '<td>' + cliente.nome + '</td>' +
                 '<td><div class="btn-group" role="group">' +
@@ -49,7 +43,8 @@ var app = (function (undefined) {
 
     return {
         init: init,
-        detalharCliente: detalharCliente,
-        aplicaMascaraMCI: aplicaMascaraMCI
+        detalharCliente: detalharCliente
     };
 })();
+
+app.init();

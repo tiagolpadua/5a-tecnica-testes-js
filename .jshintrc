@@ -90,5 +90,20 @@
     // additional predefined global variables
     "globals"       : {
         "$": false
-    }
+    },
+    "predef": [
+        "jasmine",
+        "describe",
+        "xdescribe",
+        "before",
+        "beforeEach",
+        "after",
+        "afterEach",
+        "it",
+        "xit",
+        "it",
+        "inject",
+        "expect",
+        "spyOn"
+    ]   
 }
