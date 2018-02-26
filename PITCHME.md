@@ -246,3 +246,10 @@ Firefox 58.0.0 (Ubuntu 0.0.0) Listagem de Clientes Deve ajustar a máscara se o 
         @src/appSpec.js:13:9
         <Jasmine>
 Firefox 58.0.0 (Ubuntu 0.0.0): Executed 2 of 2 (1 FAILED) (0.027 secs / 0 secs)
+---
+
+Para que a função aplicaMascaraMCI funcione a entrada deve ter exatamente 9 posições, vamos criar uma função para resolver isso,
+mas agora, vamos usar a filosofia do TDD:
+- A função chama-se 'leftPad'
+- Deve receber dois parâmetros obrigatórios que são o valor a ser tratado e a quantidade mínima de caracteres
+- Por default, leftPad irá adicionar zeros à esquerda, mas se for informado um terceiro parâmetro, ele será utilizado.
