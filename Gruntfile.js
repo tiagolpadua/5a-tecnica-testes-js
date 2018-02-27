@@ -47,9 +47,14 @@ module.exports = function (grunt) {
                 }
             }
         },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            }
+        },
         watch: {
             files: ['src/**/*.*'],
-            tasks: ['clean', 'jshint:dev', 'copy'],
+            tasks: ['clean', 'jshint:dev', 'karma', 'copy'],
             options: {
                 livereload: true
             }
@@ -61,7 +66,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('default', ['clean', 'jshint:dev', 'copy', 'connect', 'watch']);
-    grunt.registerTask('dist', ['clean', 'jshint', 'copy']);
+    grunt.registerTask('default', ['clean', 'jshint:dev', 'karma', 'copy', 'connect', 'watch']);
+    grunt.registerTask('dist', ['clean', 'jshint', 'karma', 'copy']);
 };

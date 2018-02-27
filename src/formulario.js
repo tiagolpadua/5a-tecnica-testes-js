@@ -1,5 +1,6 @@
-'use strict';
+// jshint ignore: start
 var index = (function ($, todosEnderecos) {
+    'use strict';
 
     var preencherEndereco = function (cep) {
 

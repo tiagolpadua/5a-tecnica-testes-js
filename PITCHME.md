@@ -253,3 +253,57 @@ mas agora, vamos usar a filosofia do TDD:
 - A função chama-se 'leftPad'
 - Deve receber dois parâmetros obrigatórios que são o valor a ser tratado e a quantidade mínima de caracteres
 - Por default, leftPad irá adicionar zeros à esquerda, mas se for informado um terceiro parâmetro, ele será utilizado.
+- Escrever o teste de leftPad, rodar o npm test
+- Escrever o código de leftPad, o teste de leftPad irá passar mas o de aplicaMascaraMCI irá continuar quebrando;
+- Ajustar aplicaMascaraMCI para utilizar leftPad
+
+---
+
+- Gostei muito, mas e se o desenvolvedor esquecer de fazer o npm test no seu projeto não adianta nada...
+- Será que não poderíamos integrar o ciclo de testes diretamente no comando do grunt? A resposta é "sim", vamos fazer isso
+- npm install grunt-karma --save-dev
+- incluir os trechos abaixo no Gruntfile.js:
+```js
+    //...
+    karma: {
+        unit: {
+            configFile: 'karma.conf.js'
+        }
+    },
+    watch: {
+        files: ['src/**/*.*'],
+        tasks: ['clean', 'jshint:dev', 'karma', 'copy'],
+        options: {
+            livereload: true
+        }
+    }
+    //...
+    grunt.loadNpmTasks('grunt-karma');
+    //...
+    grunt.registerTask('default', ['clean', 'jshint:dev', 'karma', 'copy', 'connect', 'watch']);
+    grunt.registerTask('dist', ['clean', 'jshint', 'karma', 'copy']);
+```
+- E no karma.conf.js:
+```js
+    //...
+    autoWatch: false,
+    //...
+    singleRun: true,
+```
+
+- Ótimo, agora não tem mais como o desenvolvedor esquecer de rodar os testes, basta abrir a pasta do projeto, fazer um 'grunt' que a tarefa default vai ser executada e tudo será feito!
+- A outra vantagem é que como alteramos a tarefa 'dist', os testes também serão executados no buildForge em tempo de construção do projeto! (será?)
+- Ainda temos um problema, na realidade os testes estão falhando no buildForge, ao olharmos o log percebemos de cara, o problema é que no servidor do buildForge não tem o firefox instalado, sim, é um servidor sem ambiente gráfico... Para resolver este problema, vamos trocar o navegador utilzado nos testes pelo PhantomJS. O PhantomJS é um servidor "sem cabeça", é um programa em linha de comandos que tem todas as funções de um navegador e nos permite executar os testes em ambientes sem interface gráfica. É até melhor para executar localmente pois não fica "abrindo e fechando" a janela do navegador toda hora. Vamos ao código:
+- npm install karma-phantomjs-launcher --save-dev
+- No karma.conf.js:
+```js
+    //...
+    browsers: ['PhantomJS'],
+    //...
+    plugins: [
+      'karma-phantomjs-launcher',
+      'karma-jasmine'
+    ],
+```
+
+- Thats all folks!

@@ -1,6 +1,6 @@
-'use strict';
-
+// jshint ignore: start
 var todosEnderecos = (function ($) {
+    'use strict';
 
     var buscarPorCep = function (cep) {
 

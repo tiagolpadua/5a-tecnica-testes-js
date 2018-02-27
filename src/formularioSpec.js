@@ -1,5 +1,6 @@
-'use strict';
+// jshint ignore: start
 (function () {
+    'use strict';
 
     var endereco = {
         cep: '70.673-410',

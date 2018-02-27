@@ -16,7 +16,8 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/jquery/dist/jquery.min.js',
-      'src/*.js'
+      'src/app.js',
+      'src/appSpec.js'
     ],
 
     // list of files to exclude
@@ -43,19 +44,18 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Firefox'],
-
+    browsers: ['PhantomJS'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     plugins: [
-      'karma-firefox-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine'
     ],
 

@@ -1,3 +1,4 @@
+/* exported app */
 var app = (function (undefined) {
     'use strict';
 
@@ -15,6 +16,7 @@ var app = (function (undefined) {
     }
 
     function aplicaMascaraMCI(mci) {
+        mci = leftPad(mci, 9);
         return mci.toString().substring(0, 3) + '.' +
             mci.toString().substring(3, 6) + '.' +
             mci.toString().substring(6, 9);
@@ -47,9 +49,18 @@ var app = (function (undefined) {
         });
     }
 
+    function leftPad(valor, comprimento, caracter) {
+        caracter = caracter || '0';
+        while((valor + '').length < comprimento) {
+            valor = caracter + valor;
+        }
+        return valor;
+    }
+
     return {
         init: init,
         detalharCliente: detalharCliente,
-        aplicaMascaraMCI: aplicaMascaraMCI
+        aplicaMascaraMCI: aplicaMascaraMCI,
+        leftPad: leftPad
     };
 })();
