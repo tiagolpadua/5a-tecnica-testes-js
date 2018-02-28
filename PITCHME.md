@@ -306,4 +306,42 @@ mas agora, vamos usar a filosofia do TDD:
     ],
 ```
 
+## Coverage
+- npm install karma karma-coverage --save-dev
+
+- Gruntfile.js
+```js
+    //...
+    clean: ['www', 'coverage'],
+    //...
+    preprocessors: {
+        'src/**/!(*Spec).js': ['coverage']
+        // 'src/**/*.js': ['coverage']
+    },
+
+    coverageReporter: {
+        dir: 'coverage/',
+        reporters: [{
+            type: 'html',
+            subdir: 'report-html'
+        },
+        {
+            type: 'lcovonly',
+            subdir: 'lcov',
+            file: 'lcov.info'
+        }
+        ]
+    },
+    reporters: ['progress', 'coverage'],
+    //...
+    plugins: [
+      'karma-phantomjs-launcher',
+      'karma-jasmine',
+      'karma-coverage'
+    ],
+```
+
+- .gitignore
+coverage
+
 - Thats all folks!

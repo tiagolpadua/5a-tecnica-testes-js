@@ -20,7 +20,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        clean: ['www'],
+        clean: ['www', 'coverage'],
         connect: {
             server: {
                 options: {
