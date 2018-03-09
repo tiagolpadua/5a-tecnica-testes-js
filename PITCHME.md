@@ -1,3 +1,10 @@
+* meme testes de integracao
+* let it go
+* TDD 20 anos
+* TDD X BDD
+* ecossistema https://medium.com/@oieduardorabelo/o-ecossistema-de-testes-em-javascript-em-2017-74a78625aa15
+
+
 # 5a. Técnica - Testes em JS
 
 ## URL para visualização
@@ -18,8 +25,17 @@
 - Karma, automatizando o processo
 - PhantomJS, testando em um navegador "sem cabeça"
 - Istanbul, calculando a cobertura de nossos testes
-
 ---
+
+
+## Ecossistema
+
+<img src="imgs/jest.png" width="200">
+<img src="imgs/dalekjs.png" width="200" height="180">
+<img src="imgs/selenium.png" width="200">
+
+<!--JEST: mocks, facebook, instalação fácil, react, TS -->
+
 ## Um pouco de BDD
 BDD ou Behavior Driven Development, é um estilo de testes onde você descreve (describe) os requisitos e informa aos testes o quê (it) ele deveria fazer.
 Então você espera (expect) que seu código dê uma certa resposta.
@@ -29,7 +45,7 @@ Então você espera (expect) que seu código dê uma certa resposta.
 ```js
 // Descreve os requisitos
 describe ('pato.js', function () {
-    
+
     // O quê deve fazer
     it('Deve saber nadar', function () {
 
