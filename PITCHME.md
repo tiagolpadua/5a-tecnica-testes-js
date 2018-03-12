@@ -1,9 +1,10 @@
+<!--
 * meme testes de integracao
 * let it go
 * TDD 20 anos
 * TDD X BDD
 * ecossistema https://medium.com/@oieduardorabelo/o-ecossistema-de-testes-em-javascript-em-2017-74a78625aa15
-
+-->
 
 # 5a. Técnica - Testes em JS
 
@@ -11,13 +12,14 @@
 
 [https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master](https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master)
 
-- RAPHAEL HENRIQUE LACERDA PINHO
-- TIAGO LAGE PAYNE DE PÁDUA
+- RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
+- TIAGO LAGE PAYNE DE PÁDUA (Auxiliar de Arquiteto de Software)
 
 ---
 
 ## Sobre o quê iremos falar
-- Um pouco de BDD
+- Ecossistema de Testes
+- BDD - Behavior Driven Development
 - Conhecendo nossa aplicação
 - Escrevendo um código testável
 - Configurando o ambiente para testes
@@ -27,14 +29,14 @@
 - Istanbul, calculando a cobertura de nossos testes
 ---
 
-
-## Ecossistema
+## Ecossistema de Testes
 
 <img src="imgs/jest.png" width="200">
 <img src="imgs/dalekjs.png" width="200" height="180">
 <img src="imgs/selenium.png" width="200">
 
-<!--JEST: mocks, facebook, instalação fácil, react, TS -->
+<!--JEST: mocks, facebook, instalação fácil, React, TS -->
+---
 
 ## Um pouco de BDD
 BDD ou Behavior Driven Development, é um estilo de testes onde você descreve (describe) os requisitos e informa aos testes o quê (it) ele deveria fazer.
@@ -58,17 +60,22 @@ describe ('pato.js', function () {
 ```
 
 ## Conhecendo nossa aplicação
-- tela0.png
-- tela1.png
 
+### Sistema de Listagem de Clientes
 ---
-## Recebemos um report de erro... :-(
-- tela3.png
-
+<img src="prints/tela0.png">
+---
+<img src="prints/tela1.png">
+---
+## Recebemos um report de erro :-(
+<img src="prints/tela3.png">
+---
+- Apresentação para aqui, segue o live coding
+---
 ## Vamos entender como está estruturado nosso projeto
-
+---
 ## Configurando o ambiente para testes
-
+---
 - npm install --save-dev jasmine
 - criar o arquivo appSpec.js
 - ./node_modules/.bin/jasmine src/appSpec.js
@@ -81,11 +88,12 @@ describe('Listagem de Clientes', function () {
     });
 });
 ```
+---
 - Trocar o true por false pra ver o teste quebrar
 - Vamos deixar os testes mais fáceis, colocando o script no npm
 - "test": "jasmine src/appSpec.js"
 - npm test
-
+---
 - Ok, agora já podemos testar nossa aplicação!
 - Parece que o defeito é na hora de colocar a máscara no MCI
 - Vixe, nosso código é muito acoplado...
@@ -113,6 +121,7 @@ $('#tblClientes tbody').append(
     '</div></td></tr>'
 );
 ```
+---
 - Agora precisamos escrever o teste de fato:
 ```js
 describe('Listagem de Clientes', function () {
@@ -155,7 +164,6 @@ npm ERR! Test failed.  See above for more details.
 - karma init
 ---
 ➜  5a-tecnica-testes-js git:(master) ✗ karma init
-
 Which testing framework do you want to use ?
 Press tab to list possible options. Enter to move to the next question.
 > jasmine
