@@ -6,9 +6,9 @@
 * ecossistema https://medium.com/@oieduardorabelo/o-ecossistema-de-testes-em-javascript-em-2017-74a78625aa15
 -->
 
-# 5a. Técnica - Testes em JS
+<!-- - URL para visualização: [https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master](https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master) -->
 
-- URL para visualização: [https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master](https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master)
+# 5a. Técnica - Testes em JS
 
 - RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
 - TIAGO LAGE PAYNE DE PÁDUA (Auxiliar de Arquiteto de Software)
