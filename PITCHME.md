@@ -1,8 +1,10 @@
 <!--
 * meme testes de integracao
 * let it go
-* TDD 20 anos
-* TDD X BDD
+* http://blog.caelum.com.br/testes-sao-mais-do-que-regressao-os-beneficios-no-design/
+* OWSAP - 2017
+* quarto limpo
+* quarto sujo
 * ecossistema https://medium.com/@oieduardorabelo/o-ecossistema-de-testes-em-javascript-em-2017-74a78625aa15
 -->
 
@@ -11,11 +13,17 @@
 # 5a. Técnica - Testes em JS
 
 - RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
-- TIAGO LAGE PAYNE DE PÁDUA (Auxiliar de Arquiteto de Software)
+- TIAGO LAGE PAYNE DE PÁDUA (Auxiliar **DE** Arquiteto de Software)
 
----
+
+<img src="imgs/choque.jpg" alt="">
+
+## EVENTO
+
+* [Brasília Dev Festival](http://brasiliadevfestival.com.br/)
 
 ## Sobre o quê iremos falar
+<!--
 - Ecossistema de Testes
 - BDD - Behavior Driven Development
 - Conhecendo nossa aplicação
@@ -25,16 +33,116 @@
 - Karma, automatizando o processo
 - PhantomJS, testando em um navegador "sem cabeça"
 - Istanbul, calculando a cobertura de nossos testes
----
+-->
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2 unit tests. 0 integration tests. <a href="https://t.co/iAqJMGokxc">pic.twitter.com/iAqJMGokxc</a></p>&mdash; The Practical Dev (@ThePracticalDev) <a href="https://twitter.com/ThePracticalDev/status/894564273053216769?ref_src=twsrc%5Etfw">August 7, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## Ecossistema de Testes
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2 unit tests<br>0 integration tests <a href="https://t.co/95RoYKy96b">pic.twitter.com/95RoYKy96b</a></p>&mdash; Dmitri Sotnikov ⚛ (@yogthos) <a href="https://twitter.com/yogthos/status/951905438727057408?ref_src=twsrc%5Etfw">January 12, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## TDD/BDD/ATDD é tudo velho
+
+* 1993
+
+* 1996
+
+* [2003](http://www.bugbang.com.br/entendendo-bdd-com-cucumber-parte-i/)
+
+* [2006](https://dannorth.net/introducing-bdd/)
+
+* [2009 - 10 anos de TDD](https://www.infoq.com/presentations/tdd-ten-years-later)
+
+* [TDD.caelum.com.br](http://tdd.caelum.com.br/)
+
+<img src="imgs/cowboy.png" alt="">
+
+<!-- Dan North BDD-->
+
+## Maurício Aniche
+
+* [Profissão Testador](https://github.com/raphaelLacerda/apresentacao-tdd/blob/master/index.html)
+
+    * 2010 - [Indústria com TDD](http://www.mauricioaniche.com/2010/04/tdd-realmente-ajuda/)
+
+* 2017 - [Lint x Unit Test](http://www.mauricioaniche.com/2017/09/why-and-how-javascript-developers-use-linters/)
+
+<img src="imgs/tdd.png" alt="">
+
+> *You need to seek all possible cases for unit tests, but sometimes it’s very hard, and
+of course in all projects, unit tests don’t cover all possible
+cases. So this is why a linter is a second protection line*
+
+## Por quê vc não testa?
+
+> Uso JavaEE - não sei isolar classes do contexto
+
+> Só faço CRUD
+
+> Entendo os ganhos, mas não tenho a manha
+
+> Irá atrasar a entrega do projeto
+
+> Custo alto! Meu progamador fará mais código
+
+## Nova desculpa
+
+* Eu só uso **JAVASCRIPT**
+
+## My workspace...
+
+<img src="imgs/escritorio1.jpg" alt="">
+
+## Como minha mulher vê
+
+<img src="imgs/esc.jpg" alt="">
+
+## OWSAP
+
+<img src="imgs/owsap.jpg" alt="">
+
+## Ecossistema JS
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr">&quot;JS tá tão zueira que agora os posts vem todos com o ano, tipo:<br>- O Ecossistema de Testes em JavaScript em 2017<br>- How to learn React, Angular or Vue in 2018<br>- An Overview of JavaScript Testing in 2018&quot;<br>-- <a href="https://twitter.com/tiagolpadua?ref_src=twsrc%5Etfw">@tiagolpadua</a></p>&mdash; Alexandre Aquiles (@alex_aquiles) <a href="https://twitter.com/alex_aquiles/status/973339341400543238?ref_src=twsrc%5Etfw">March 12, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+## amanhã já muda...
+
+* ambiente, sintaxe, asserção, browser, mocks, coverage
 
 <img src="imgs/jest.png" width="200">
-<img src="imgs/dalekjs.png" width="200" height="180">
+<img src="imgs/dalekjs.png" width="150" height="150">
 <img src="imgs/selenium.png" width="200">
+<img src="imgs/mocha.png" width="150" height="150">
+<img src="imgs/cucumber.jpg" width="200">
+<img src="imgs/qunit.gif" width="200">
+<img src="imgs/chai.jpg" width="150" height="150">
+<img src="imgs/unexpected.png" width="150" height="150">
+<img src="imgs/ava.png" width="150" height="150">
+<img src="imgs/sinon.png" width="150" height="150">
+<img src="imgs/karma.png" width="150" height="150">
+<img src="imgs/instambul.png" width="150" height="150">
+<img src="imgs/phantomjs-logo.png" >
+<img src="imgs/protractor.jpg" width="150" height="150">
+<img src="imgs/nightwatch.png" width="150" height="150">
 
-<!--JEST: mocks, facebook, instalação fácil, React, TS -->
+[Martin Fowler Mocks aren't stubs](https://martinfowler.com/articles/mocksArentStubs.html)
+<!--JEST:
+
+JEST - testes de unidade
+DALEKJS - testes de Sistema
+CHAI - asserções
+http://unexpected.js.org/ - asserções
+AVA - execução paralela
+SINON - mocks
+
 ---
+-->
+
+
+## Mas poderia ser pior
+
+<img src="imgs/php.jpg" alt="">
 
 ## Um pouco de BDD
 BDD ou Behavior Driven Development, é um estilo de testes onde você descreve (describe) os requisitos e informa aos testes o quê (it) ele deveria fazer.
@@ -160,6 +268,10 @@ npm ERR! Test failed.  See above for more details.
 - E para facilitar nossa vida, o karma-cli
 - npm install --global karma-cli
 - karma init
+
+
+<img src="imgs/karma-explicacao.png" alt="">
+
 ---
 ➜  5a-tecnica-testes-js git:(master) ✗ karma init
 Which testing framework do you want to use ?
@@ -367,3 +479,11 @@ mas agora, vamos usar a filosofia do TDD:
 coverage
 
 - Thats all folks!
+
+
+## Unit Tests - ok | skipped Integrations testes
+
+<img src="imgs/testes-unidade-ok-sem-teste-integracao.jpg" alt="">
+<img src="imgs/unit-testes-ok.jpg" alt="">
+
+## Kahhot
