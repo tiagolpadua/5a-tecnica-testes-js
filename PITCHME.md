@@ -10,7 +10,7 @@
 
 <!-- - URL para visualização: [https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master](https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master) -->
 
-# 5a. Técnica - Testes em JS
+## 5a. Técnica - Testes em JS
 
 - RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
 - TIAGO LAGE PAYNE DE PÁDUA (Auxiliar **DE** Arquiteto de Software)
@@ -40,7 +40,7 @@
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2 unit tests<br>0 integration tests <a href="https://t.co/95RoYKy96b">pic.twitter.com/95RoYKy96b</a></p>&mdash; Dmitri Sotnikov ⚛ (@yogthos) <a href="https://twitter.com/yogthos/status/951905438727057408?ref_src=twsrc%5Etfw">January 12, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## TDD/BDD/ATDD é tudo velho
+## TDD/BDD/ATDD/xDD é tudo velho
 
 * 1993
 
@@ -135,8 +135,6 @@ CHAI - asserções
 http://unexpected.js.org/ - asserções
 AVA - execução paralela
 SINON - mocks
-
----
 -->
 
 
