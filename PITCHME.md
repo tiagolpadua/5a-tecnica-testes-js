@@ -10,7 +10,7 @@
 
 <!-- - URL para visualização: [https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master](https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master) -->
 
-## 5a. Técnica - Testes em JS
+## Testes! Sim, em JS!
 
 - RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
 - TIAGO LAGE PAYNE DE PÁDUA (Auxiliar **DE** Arquiteto de Software)
