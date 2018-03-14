@@ -177,8 +177,15 @@ describe ('pato.js', function () {
 - Apresentação para aqui, segue o live coding
 ---
 ## Vamos entender como está estruturado nosso projeto
+- estrutura de pastas
+- src
+- index.html
+- grunt em 1 minuto
+- live reload
 ---
 ## Configurando o ambiente para testes
+- Mas nossa aplicação infelizmente não possui nenhum caso de teste...
+- Vamos configurá-la para que comece a ter testes
 ---
 - npm install --save-dev jasmine
 - criar o arquivo appSpec.js
