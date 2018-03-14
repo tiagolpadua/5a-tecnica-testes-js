@@ -186,10 +186,35 @@ describe ('pato.js', function () {
 ## Configurando o ambiente para testes
 - Mas nossa aplicação infelizmente não possui nenhum caso de teste...
 - Vamos configurá-la para que comece a ter testes
----
+- Bom, a primeira coisa que precisamos é de uma biblioteca para fazer algo como os "assertions" do Java:
+
+```java
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+public class MyTests {
+
+    @Test
+    public void multiplicationOfZeroIntegersShouldReturnZero() {
+        MyClass tester = new MyClass(); // MyClass is tested
+
+        // assert statements
+        assertEquals(0, tester.multiply(10, 0), "10 x 0 must be 0");
+        assertEquals(0, tester.multiply(0, 10), "0 x 10 must be 0");
+        assertEquals(0, tester.multiply(0, 0), "0 x 0 must be 0");
+    }
+}
+```
+No mundo do JavaScript, isso é função da biblioteca Jasmine, vamos instalá-la:
 - npm install --save-dev jasmine
-- criar o arquivo appSpec.js
-- ./node_modules/.bin/jasmine src/appSpec.js
+Agora vamos criar o arquivo de testes propriamente dito:
+- Criar o arquivo appSpec.js
+Falar sobre a pasta do arquivo e sua nomenclatura
+./node_modules/.bin/jasmine src/appSpec.js
+ou
+npx jasmine src/appSpec.js
+- Mas agora vamos criar um teste de exemplo:
 - Colocar o código abaixo em appSpec.js:
 ```js
 describe('Listagem de Clientes', function () {
@@ -235,6 +260,7 @@ $('#tblClientes tbody').append(
 ---
 - Agora precisamos escrever o teste de fato:
 ```js
+// jshint ignore:start
 describe('Listagem de Clientes', function () {
     'use strict';
     it('Deve aplicar a máscara em um MCI informado', function () {
@@ -267,9 +293,9 @@ Finished in 0.009 seconds
 Randomized with seed 82134 (jasmine --random=true --seed=82134)
 npm ERR! Test failed.  See above for more details.
 ---
-
-- Precisamos de uma ferramenta para "levantar" o ambiente de testes...
-- npm install --save-dev karma
+- O problema é que o Jasmine só sabe do arquivo appSpec.js...
+- Precisamos de uma ferramenta para "levantar" o ambiente de testes e disponibilizar todos os arquivos necessários para o teste
+npm install --save-dev karma
 - E para facilitar nossa vida, o karma-cli
 - npm install --global karma-cli
 - karma init
@@ -290,7 +316,9 @@ Press tab to list possible options. Enter to move to the next question.
 
 Do you want to capture any browsers automatically ?
 Press tab to list possible options. Enter empty string to move to the next question.
+> Firefox
 >
+
 26 02 2018 08:55:14.878:WARN [init]: Failed to install "karma-jasmine". No permissions to write in /usr/local/lib!
   Please install it manually.
 
@@ -363,6 +391,21 @@ Firefox 58.0.0 (Ubuntu 0.0.0) Listagem de Clientes Deve aplicar a máscara em um
         <Jasmine>
 Firefox 58.0.0 (Ubuntu 0.0.0): Executed 1 of 1 (1 FAILED) ERROR (0.025 secs / 0 secs)
 ---
+```js
+//...
+// Tornar a função visível externamente
+return {
+    init: init,
+    detalharCliente: detalharCliente,
+    aplicaMascaraMCI: aplicaMascaraMCI
+};
+//...
+// Ajustar para app.aplicaMascaraMCI
+it('Deve aplicar a máscara a um MCI informado', function () {
+    expect(app.aplicaMascaraMCI(111222333)).toBe('111.222.333');
+});
+```
+---
 - Se vc abrir o developer tools vai ver que foi feito um request para clientes.json, vamos arrumar isso
 - Separar a linha que inicializa a app em outro script:
 ```html
@@ -393,14 +436,55 @@ mas agora, vamos usar a filosofia do TDD:
 - Deve receber dois parâmetros obrigatórios que são o valor a ser tratado e a quantidade mínima de caracteres
 - Por default, leftPad irá adicionar zeros à esquerda, mas se for informado um terceiro parâmetro, ele será utilizado.
 - Escrever o teste de leftPad, rodar o npm test
-- Escrever o código de leftPad, o teste de leftPad irá passar mas o de aplicaMascaraMCI irá continuar quebrando;
-- Ajustar aplicaMascaraMCI para utilizar leftPad
 
+```js
+describe('leftPad', function () {
+    it('Deve converter um valor para um comprimento fixo, utilizar 0 como caracter default', function () {
+        expect(app.leftPad(11244, 6)).toBe('011244');
+    });
+
+    it('Deve aceitar um caracter diferente para fazer o pad', function () {
+        expect(app.leftPad(5784, 7, 'X')).toBe('XXX5784');
+    });
+});
+```
+
+- Escrever o código de leftPad, o teste de leftPad irá passar mas o de aplicaMascaraMCI irá continuar quebrando;
+```js
+function leftPad(valor, comprimento, caracter) {
+    caracter = caracter || '0';
+    while((valor + '').length < comprimento) {
+        valor = caracter + valor;
+    }
+    return valor;
+}
+
+return {
+    init: init,
+    detalharCliente: detalharCliente,
+    aplicaMascaraMCI: aplicaMascaraMCI,
+
+    // Código novo aqui!
+    leftPad: leftPad
+};
+```
+
+- Ajustar aplicaMascaraMCI para utilizar leftPad
+```js
+function aplicaMascaraMCI(mci) {
+    // Código novo aqui
+    mci = leftPad(mci, 9);
+
+    return  mci.toString().substring(0, 3) + '.' +
+            mci.toString().substring(3, 6) + '.' +
+            mci.toString().substring(6, 9);
+}
+```
 ---
 
 - Gostei muito, mas e se o desenvolvedor esquecer de fazer o npm test no seu projeto não adianta nada...
 - Será que não poderíamos integrar o ciclo de testes diretamente no comando do grunt? A resposta é "sim", vamos fazer isso
-- npm install grunt-karma --save-dev
+npm install grunt-karma --save-dev
 - incluir os trechos abaixo no Gruntfile.js:
 ```js
     //...
@@ -411,7 +495,12 @@ mas agora, vamos usar a filosofia do TDD:
     },
     watch: {
         files: ['src/**/*.*'],
-        tasks: ['clean', 'jshint:dev', 'karma', 'copy'],
+        tasks: ['clean', 'jshint:dev', 
+
+            // Código novo aqui
+            'karma',
+
+            'copy'],
         options: {
             livereload: true
         }
@@ -439,19 +528,24 @@ mas agora, vamos usar a filosofia do TDD:
     //...
     browsers: ['PhantomJS'],
     //...
-    plugins: [
-      'karma-phantomjs-launcher',
-      'karma-jasmine'
-    ],
+    // plugins: [
+    //   'karma-phantomjs-launcher',
+    //   'karma-jasmine'
+    // ],
 ```
 
 ## Coverage
+Pra ficar top mesmo só se tivesse como fazer relatório de cobertura de testes, e tem!
 - npm install karma karma-coverage --save-dev
 
 - Gruntfile.js
 ```js
     //...
     clean: ['www', 'coverage'],
+```
+
+- karma.conf.js
+```js
     //...
     preprocessors: {
         'src/**/!(*Spec).js': ['coverage']
@@ -464,6 +558,8 @@ mas agora, vamos usar a filosofia do TDD:
             type: 'html',
             subdir: 'report-html'
         },
+
+        //2 parte
         {
             type: 'lcovonly',
             subdir: 'lcov',
@@ -484,7 +580,6 @@ mas agora, vamos usar a filosofia do TDD:
 coverage
 
 - Thats all folks!
-
 
 ## Unit Tests - ok | skipped Integrations testes
 
