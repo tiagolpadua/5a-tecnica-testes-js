@@ -1,3 +1,4 @@
+// jshint ignore:start
 // Karma configuration
 // Generated on Mon Feb 26 2018 08:55:49 GMT-0300 (-03)
 
