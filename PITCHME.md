@@ -10,13 +10,14 @@
 
 <!-- - URL para visualização: [https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master](https://gitpitch.com/tiagolpadua/5a-tecnica-testes-js/master) -->
 
-## Testes! Sim, em JS!
+## Testes sem censura!
 
 - RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
-- TIAGO LAGE PAYNE DE PÁDUA (Auxiliar **DE** Arquiteto de Software)
-
+- TIAGO LAGE PAYNE DE PÁDUA (Assistente **DO** Arquiteto de Software)
 
 <img src="imgs/choque.jpg" alt="">
+
+---
 
 ## EVENTO
 
@@ -88,7 +89,7 @@ cases. So this is why a linter is a second protection line*
 
 * Eu só uso **JAVASCRIPT**
 
-## My workspace...
+## How i see my workspace...
 
 <img src="imgs/escritorio1.jpg" alt="">
 
@@ -110,9 +111,12 @@ cases. So this is why a linter is a second protection line*
 
 * ambiente, sintaxe, asserção, browser, mocks, coverage
 
-<img src="imgs/jest.png" width="200">
+
 <img src="imgs/dalekjs.png" width="150" height="150">
 <img src="imgs/selenium.png" width="200">
+<img src="imgs/carpejs.jpg" width="200">
+<img src="imgs/jasmine.png" width="150" height="150">
+<img src="imgs/jest.png" width="200">
 <img src="imgs/mocha.png" width="150" height="150">
 <img src="imgs/cucumber.jpg" width="200">
 <img src="imgs/qunit.gif" width="200">
