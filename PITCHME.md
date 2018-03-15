@@ -14,9 +14,9 @@
 
 <img src="imgs/choque.jpg" alt="" width="650" height="350">
 
-<p>RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)</p>
+<div style="font-size: 12px">RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)</div>
 
-<p>TIAGO LAGE PAYNE DE PÁDUA (Assistente <b>DO<b/> Arquiteto de Software)</p>
+<div style="font-size: 12px">TIAGO LAGE PAYNE DE PÁDUA (Assistente <b>DO</b> Arquiteto de Software)</div>
 
 ---
 
