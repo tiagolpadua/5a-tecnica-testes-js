@@ -12,10 +12,11 @@
 
 ## Testes sem censura!
 
-- RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
-- TIAGO LAGE PAYNE DE PÁDUA (Assistente **DO** Arquiteto de Software)
+<img src="imgs/choque.jpg" alt="" width="650" height="350">
 
-<img src="imgs/choque.jpg" alt="">
+> RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
+
+> TIAGO LAGE PAYNE DE PÁDUA (Assistente **DO** Arquiteto de Software)
 
 ---
 
@@ -23,7 +24,8 @@
 
 * [Brasília Dev Festival](http://brasiliadevfestival.com.br/)
 
-## Sobre o quê iremos falar
+---
+## Unit test - OK | Integration - failed
 <!--
 - Ecossistema de Testes
 - BDD - Behavior Driven Development
@@ -35,17 +37,17 @@
 - PhantomJS, testando em um navegador "sem cabeça"
 - Istanbul, calculando a cobertura de nossos testes
 -->
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2 unit tests. 0 integration tests. <a href="https://t.co/iAqJMGokxc">pic.twitter.com/iAqJMGokxc</a></p>&mdash; The Practical Dev (@ThePracticalDev) <a href="https://twitter.com/ThePracticalDev/status/894564273053216769?ref_src=twsrc%5Etfw">August 7, 2017</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2 unit tests<br>0 integration tests <a href="https://t.co/95RoYKy96b">pic.twitter.com/95RoYKy96b</a></p>&mdash; Dmitri Sotnikov ⚛ (@yogthos) <a href="https://twitter.com/yogthos/status/951905438727057408?ref_src=twsrc%5Etfw">January 12, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<img src="imgs/testes-unidade-ok-sem-teste-integracao.jpg" width="330">
+<img src="imgs/unit-testes-ok.jpg" alt="" width="330">
+
+---
 
 ## TDD/BDD/ATDD/xDD é tudo velho
 
-* 1993
+* [late 80s](https://martinfowler.com/bliki/ExtremeProgramming.html)
 
-* 1996
+* [1996](http://www.zdnet.com/article/kent-beck-we-thought-we-were-just-programming-on-an-airplane/)
 
 * [2003](http://www.bugbang.com.br/entendendo-bdd-com-cucumber-parte-i/)
 
@@ -55,23 +57,33 @@
 
 * [TDD.caelum.com.br](http://tdd.caelum.com.br/)
 
-<img src="imgs/cowboy.png" alt="">
+---
 
-<!-- Dan North BDD-->
+<!--
+XP
+TDD - Kent Beck | Erich Gamma
+Dan North BDD
+-->
 
-## Maurício Aniche
+
+## Maurício Aniche - o CARA!
 
 * [Profissão Testador](https://github.com/raphaelLacerda/apresentacao-tdd/blob/master/index.html)
 
     * 2010 - [Indústria com TDD](http://www.mauricioaniche.com/2010/04/tdd-realmente-ajuda/)
 
 * 2017 - [Lint x Unit Test](http://www.mauricioaniche.com/2017/09/why-and-how-javascript-developers-use-linters/)
-
-<img src="imgs/tdd.png" alt="">
+<img src="imgs/aniche.jpg" alt="">
 
 > *You need to seek all possible cases for unit tests, but sometimes it’s very hard, and
 of course in all projects, unit tests don’t cover all possible
 cases. So this is why a linter is a second protection line*
+
+---
+
+<img src="imgs/tdd.png" alt="">
+
+---
 
 ## Por quê vc não testa?
 
@@ -84,42 +96,45 @@ cases. So this is why a linter is a second protection line*
 > Irá atrasar a entrega do projeto
 
 > Custo alto! Meu progamador fará mais código
+---
 
 ## Nova desculpa
+<img src="imgs/js-callbacks.gif" alt="">
 
-* Eu só uso **JAVASCRIPT**
-
-## How i see my workspace...
+---
 
 <img src="imgs/escritorio1.jpg" alt="">
 
-## Como minha mulher vê
+---
 
 <img src="imgs/esc.jpg" alt="">
+
+---
 
 ## OWSAP
 
 <img src="imgs/owsap.jpg" alt="">
+
+---
 
 ## Ecossistema JS
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr">&quot;JS tá tão zueira que agora os posts vem todos com o ano, tipo:<br>- O Ecossistema de Testes em JavaScript em 2017<br>- How to learn React, Angular or Vue in 2018<br>- An Overview of JavaScript Testing in 2018&quot;<br>-- <a href="https://twitter.com/tiagolpadua?ref_src=twsrc%5Etfw">@tiagolpadua</a></p>&mdash; Alexandre Aquiles (@alex_aquiles) <a href="https://twitter.com/alex_aquiles/status/973339341400543238?ref_src=twsrc%5Etfw">March 12, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
-## amanhã já muda...
+---
+### relaxa, amanhã já muda...
 
 * ambiente, sintaxe, asserção, browser, mocks, coverage
 
-
-<img src="imgs/dalekjs.png" width="150" height="150">
-<img src="imgs/selenium.png" width="200">
-<img src="imgs/carpejs.jpg" width="200">
 <img src="imgs/jasmine.png" width="150" height="150">
 <img src="imgs/jest.png" width="200">
 <img src="imgs/mocha.png" width="150" height="150">
 <img src="imgs/cucumber.jpg" width="200">
 <img src="imgs/qunit.gif" width="200">
+<img src="imgs/dalekjs.png" width="150" height="150">
+<img src="imgs/selenium.png" width="200">
+<img src="imgs/carpejs.jpg" width="200">
 <img src="imgs/chai.jpg" width="150" height="150">
 <img src="imgs/unexpected.png" width="150" height="150">
 <img src="imgs/ava.png" width="150" height="150">
@@ -131,6 +146,9 @@ cases. So this is why a linter is a second protection line*
 <img src="imgs/nightwatch.png" width="150" height="150">
 
 [Martin Fowler Mocks aren't stubs](https://martinfowler.com/articles/mocksArentStubs.html)
+
+---
+
 <!--JEST:
 
 JEST - testes de unidade
@@ -145,6 +163,8 @@ SINON - mocks
 ## Mas poderia ser pior
 
 <img src="imgs/php.jpg" alt="">
+
+---
 
 ## Um pouco de BDD
 BDD ou Behavior Driven Development, é um estilo de testes onde você descreve (describe) os requisitos e informa aos testes o quê (it) ele deveria fazer.
@@ -499,7 +519,7 @@ npm install grunt-karma --save-dev
     },
     watch: {
         files: ['src/**/*.*'],
-        tasks: ['clean', 'jshint:dev', 
+        tasks: ['clean', 'jshint:dev',
 
             // Código novo aqui
             'karma',
@@ -583,11 +603,6 @@ Pra ficar top mesmo só se tivesse como fazer relatório de cobertura de testes,
 - .gitignore
 coverage
 
-- Thats all folks!
+---
 
-## Unit Tests - ok | skipped Integrations testes
-
-<img src="imgs/testes-unidade-ok-sem-teste-integracao.jpg" alt="">
-<img src="imgs/unit-testes-ok.jpg" alt="">
-
-## Kahhot
+# Kahhot
