@@ -20,9 +20,7 @@
 
 ---
 
-## EVENTO
-
-* [Brasília Dev Festival](http://brasiliadevfestival.com.br/)
+## [Brasília Dev Festival](http://brasiliadevfestival.com.br/)
 
 ---
 ### Unit test - OK | Integration - failed
@@ -69,7 +67,8 @@ Dan North BDD
 ### Maurício Aniche - o CARA!
 
 * [Profissão Testador](https://github.com/raphaelLacerda/apresentacao-tdd/blob/master/index.html), 2010 - [Indústria com TDD](http://www.mauricioaniche.com/2010/04/tdd-realmente-ajuda/), 2017 - [Lint x Unit Test](http://www.mauricioaniche.com/2017/09/why-and-how-javascript-developers-use-linters/)
-<img src="imgs/aniche.jpg" alt="" width="600" height="350">
+
+ <img src="imgs/aniche.jpg" alt="" width="600" height="350">
 
 > *You need to seek all possible cases for unit tests, but sometimes it’s very hard, and
 of course in all projects, unit tests don’t cover all possible
