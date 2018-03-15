@@ -14,9 +14,9 @@
 
 <img src="imgs/choque.jpg" alt="" width="650" height="350">
 
-> RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)
+<p>RAPHAEL HENRIQUE LACERDA PINHO (Arquiteto de Software)</p>
 
-> TIAGO LAGE PAYNE DE PÁDUA (Assistente **DO** Arquiteto de Software)
+<p>TIAGO LAGE PAYNE DE PÁDUA (Assistente <b>DO<b/> Arquiteto de Software)</p>
 
 ---
 
@@ -25,7 +25,7 @@
 * [Brasília Dev Festival](http://brasiliadevfestival.com.br/)
 
 ---
-## Unit test - OK | Integration - failed
+### Unit test - OK | Integration - failed
 <!--
 - Ecossistema de Testes
 - BDD - Behavior Driven Development
@@ -43,7 +43,7 @@
 
 ---
 
-## TDD/BDD/ATDD/xDD é tudo velho
+### TDD/BDD/ATDD/xDD é tudo velho
 
 * [late 80s](https://martinfowler.com/bliki/ExtremeProgramming.html)
 
@@ -66,14 +66,10 @@ Dan North BDD
 -->
 
 
-## Maurício Aniche - o CARA!
+### Maurício Aniche - o CARA!
 
-* [Profissão Testador](https://github.com/raphaelLacerda/apresentacao-tdd/blob/master/index.html)
-
-    * 2010 - [Indústria com TDD](http://www.mauricioaniche.com/2010/04/tdd-realmente-ajuda/)
-
-* 2017 - [Lint x Unit Test](http://www.mauricioaniche.com/2017/09/why-and-how-javascript-developers-use-linters/)
-<img src="imgs/aniche.jpg" alt="">
+* [Profissão Testador](https://github.com/raphaelLacerda/apresentacao-tdd/blob/master/index.html), 2010 - [Indústria com TDD](http://www.mauricioaniche.com/2010/04/tdd-realmente-ajuda/), 2017 - [Lint x Unit Test](http://www.mauricioaniche.com/2017/09/why-and-how-javascript-developers-use-linters/)
+<img src="imgs/aniche.jpg" alt="" width="600" height="350">
 
 > *You need to seek all possible cases for unit tests, but sometimes it’s very hard, and
 of course in all projects, unit tests don’t cover all possible
@@ -85,7 +81,7 @@ cases. So this is why a linter is a second protection line*
 
 ---
 
-## Por quê vc não testa?
+### Por quê vc não testa?
 
 > Uso JavaEE - não sei isolar classes do contexto
 
@@ -117,16 +113,12 @@ cases. So this is why a linter is a second protection line*
 
 ---
 
-## Ecossistema JS
+### Ecossistema JS
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr">&quot;JS tá tão zueira que agora os posts vem todos com o ano, tipo:<br>- O Ecossistema de Testes em JavaScript em 2017<br>- How to learn React, Angular or Vue in 2018<br>- An Overview of JavaScript Testing in 2018&quot;<br>-- <a href="https://twitter.com/tiagolpadua?ref_src=twsrc%5Etfw">@tiagolpadua</a></p>&mdash; Alexandre Aquiles (@alex_aquiles) <a href="https://twitter.com/alex_aquiles/status/973339341400543238?ref_src=twsrc%5Etfw">March 12, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
-### relaxa, amanhã já muda...
-
-* ambiente, sintaxe, asserção, browser, mocks, coverage
-
 <img src="imgs/jasmine.png" width="150" height="150">
 <img src="imgs/jest.png" width="200">
 <img src="imgs/mocha.png" width="150" height="150">
@@ -147,6 +139,8 @@ cases. So this is why a linter is a second protection line*
 
 [Martin Fowler Mocks aren't stubs](https://martinfowler.com/articles/mocksArentStubs.html)
 
+<!--ambiente, sintaxe, asserção, browser, mocks, coverage -->
+
 ---
 
 <!--JEST:
@@ -160,7 +154,7 @@ SINON - mocks
 -->
 
 
-## Mas poderia ser pior
+### Mas poderia ser pior...
 
 <img src="imgs/php.jpg" alt="">
 
