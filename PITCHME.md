@@ -202,6 +202,7 @@ Recebemos um report de erro :-(
 - index.html
 - grunt em 1 minuto
 - live reload
+- mostrar a app funcionando e incluir na base um cliente que gere o problema
 ---
 ## Configurando o ambiente para testes
 - Mas nossa aplicação infelizmente não possui nenhum caso de teste...
@@ -313,8 +314,12 @@ Failures:
 Finished in 0.009 seconds
 Randomized with seed 82134 (jasmine --random=true --seed=82134)
 npm ERR! Test failed.  See above for more details.
+
+
 ---
 - O problema é que o Jasmine só sabe do arquivo appSpec.js...
+- Uma solução é mudar o script para "test": "jasmine src/*.js"
+- Mas agora tem outro problema...
 - Precisamos de uma ferramenta para "levantar" o ambiente de testes e disponibilizar todos os arquivos necessários para o teste
 npm install --save-dev karma
 - E para facilitar nossa vida, o karma-cli
@@ -434,6 +439,7 @@ it('Deve aplicar a máscara a um MCI informado', function () {
 <script>
     app.init();
 </script>
+- incluir /* exported app */ no topo de app.js
 ```
 - Agora sim! tudo pronto. Parece que nosso problema é quando o mci é um número com menos de 9 posições, vamos criar o teste:
 ```js
@@ -503,17 +509,19 @@ function aplicaMascaraMCI(mci) {
 ```
 ---
 
-- Gostei muito, mas e se o desenvolvedor esquecer de fazer o npm test no seu projeto não adianta nada...
+- Gostei muito, mas e se o desenvolvedor esquecer de fazer o npm test no seu projeto não adianta nada
+- Tá muito "java" ainda...
 - Será que não poderíamos integrar o ciclo de testes diretamente no comando do grunt? A resposta é "sim", vamos fazer isso
 npm install grunt-karma --save-dev
 - incluir os trechos abaixo no Gruntfile.js:
 ```js
-    //...
+    // Código novo aqui
     karma: {
         unit: {
             configFile: 'karma.conf.js'
         }
     },
+
     watch: {
         files: ['src/**/*.*'],
         tasks: ['clean', 'jshint:dev',
@@ -559,12 +567,6 @@ npm install grunt-karma --save-dev
 Pra ficar top mesmo só se tivesse como fazer relatório de cobertura de testes, e tem!
 - npm install karma karma-coverage --save-dev
 
-- Gruntfile.js
-```js
-    //...
-    clean: ['www', 'coverage'],
-```
-
 - karma.conf.js
 ```js
     //...
@@ -573,14 +575,22 @@ Pra ficar top mesmo só se tivesse como fazer relatório de cobertura de testes,
         // 'src/**/*.js': ['coverage']
     },
 
+    // 1 v
+    coverageReporter: {
+      dir: 'coverage/',
+      reporters: [{
+          type: 'html',
+          subdir: 'report-html'
+      }]
+    }
+
+    // 2 v
     coverageReporter: {
         dir: 'coverage/',
         reporters: [{
             type: 'html',
             subdir: 'report-html'
         },
-
-        //2 parte
         {
             type: 'lcovonly',
             subdir: 'lcov',
@@ -588,6 +598,7 @@ Pra ficar top mesmo só se tivesse como fazer relatório de cobertura de testes,
         }
         ]
     },
+    
     reporters: ['progress', 'coverage'],
     //...
     plugins: [
@@ -595,6 +606,12 @@ Pra ficar top mesmo só se tivesse como fazer relatório de cobertura de testes,
       'karma-jasmine',
       'karma-coverage'
     ],
+```
+
+- Gruntfile.js
+```js
+    //...
+    clean: ['www', 'coverage'],
 ```
 
 - .gitignore
