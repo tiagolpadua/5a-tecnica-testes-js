@@ -36,8 +36,12 @@
 - Istanbul, calculando a cobertura de nossos testes
 -->
 
-<img src="imgs/testes-unidade-ok-sem-teste-integracao.jpg" width="330">
-<img src="imgs/unit-testes-ok.jpg" alt="" width="330">
+<img src="imgs/testes-unidade-ok-sem-teste-integracao.jpg" width="350">
+<img src="imgs/unit-testes-ok.jpg" alt="" width="350">
+
+---
+
+<img src="imgs/cowboy.png" alt="" width="330">
 
 ---
 
