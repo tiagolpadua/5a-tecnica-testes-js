@@ -198,6 +198,7 @@ describe ('pato.js', function () {
 ## Vamos entender como está estruturado nosso projeto
 - estrutura de pastas
 - src
+- es5 unopinioted plain jquery
 - index.html
 - grunt em 1 minuto
 - live reload
@@ -206,7 +207,7 @@ describe ('pato.js', function () {
 - Mas nossa aplicação infelizmente não possui nenhum caso de teste...
 - Vamos configurá-la para que comece a ter testes
 - Bom, a primeira coisa que precisamos é de uma biblioteca para fazer algo como os "assertions" do Java:
-
+---
 ```java
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -225,6 +226,7 @@ public class MyTests {
     }
 }
 ```
+---
 No mundo do JavaScript, isso é função da biblioteca Jasmine, vamos instalá-la:
 - npm install --save-dev jasmine
 Agora vamos criar o arquivo de testes propriamente dito:
