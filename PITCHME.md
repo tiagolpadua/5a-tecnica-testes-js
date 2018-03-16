@@ -181,7 +181,7 @@ describe ('pato.js', function () {
     });
 })
 ```
-
+---
 ## Conhecendo nossa aplicação
 
 ### Sistema de Listagem de Clientes
