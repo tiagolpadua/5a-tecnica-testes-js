@@ -190,7 +190,7 @@ describe ('pato.js', function () {
 ---
 <img src="prints/tela1.png">
 ---
-## Recebemos um report de erro :-(
+Recebemos um report de erro :-(
 <img src="prints/tela3.png">
 ---
 - Apresentação para aqui, segue o live coding
@@ -227,7 +227,7 @@ public class MyTests {
 }
 ```
 ---
-No mundo do JavaScript, isso é função da biblioteca Jasmine, vamos instalá-la:
+No mundo do JavaScript, isso é função da biblioteca Jasmine, vamos instalá-la (https://jasmine.github.io/):
 - npm install --save-dev jasmine
 Agora vamos criar o arquivo de testes propriamente dito:
 - Criar o arquivo appSpec.js
