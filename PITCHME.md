@@ -41,7 +41,7 @@
 
 ---
 
-<img src="imgs/cowboy.png" alt="" width="330">
+<img src="imgs/cowboy.png" alt="">
 
 ---
 
